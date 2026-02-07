@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区域应急科普能力评价体系权重专家打分问卷</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .scale-table {
+            margin: 20px 0;
+            width: 80%;
+        }
+        .matrix-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .expert-info {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .info-group {
+            margin: 15px 0;
+        }
+        .info-group label {
+            display: block;
+            margin: 5px 0;
+        }
+        .info-group input[type="text"] {
+            width: 300px;
+            padding: 8px;
+        }
+        .radio-group {
+            margin: 10px 0;
+        }
+        .radio-group label {
+            margin-right: 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-actions {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .instruction {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .note {
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>区域应急科普能力评价体系权重专家打分问卷</h1>
+        
+        <div class="instruction">
+            <h3>问卷说明</h3>
+            <p>尊敬的专家：您好！</p>
+            <p>为科学评价区域应急科普能力，本研究采用层次分析法（AHP）构建评价体系。请您根据专业知识，对以下矩阵中各指标的相对重要性进行判断并打分。</p>
+            <p><strong>打分规则：</strong>请使用萨蒂（Saaty）1~9标度法，对指标间的重要性进行两两比较打分。</p>
+        </div>
+        
+        <div class="scale-table">
+            <h3>标度含义表</h3>
+            <table>
+                <tr>
+                    <th>标度</th>
+                    <th>含义</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>行项目与列项目重要性相同</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>行项目比列项目稍微重要</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>行项目比列项目明显重要</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>行项目比列项目强烈重要</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>行项目比列项目极端重要</td>
+                </tr>
+                <tr>
+                    <td>2,4,6,8</td>
+                    <td>上述相邻判断的中间值</td>
+                </tr>
+                <tr>
+                    <td>倒数</td>
+                    <td>若行项目与列项目的重要性之比为a，则列项目与行项目的重要性之比为1/a</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="note">
+            <p><strong>填写提示：</strong></p>
+            <p>1. 请只填写矩阵的上半部分（对角线以上），下半部分会自动计算填充。</p>
+            <p>2. 请确保填写的数值为正数，且符合标度含义。</p>
+            <p>3. 填写完成后，请点击"提交问卷"按钮。</p>
+        </div>
+        
+        <form id="questionnaire-form">
+            <!-- 第一部分：A–B 准则层两两比较矩阵 -->
+            <h2>第一部分：A–B 准则层两两比较矩阵</h2>
+            <p>比较目标：A（区域应急科普能力综合评价）下的 4 个准则 B1 组织保障、B2 资源建设、B3 活动开展、B4 社会效果的重要性。</p>
+            
+            <div class="matrix-section">
+                <table>
+                    <tr>
+                        <th>A</th>
+                        <th>B1 组织保障</th>
+                        <th>B2 资源建设</th>
+                        <th>B3 活动开展</th>
+                        <th>B4 社会效果</th>
+                    </tr>
+                    <tr>
+                        <th>B1 组织保障</th>
+                        <td>1</td>
+                        <td><input type="text" name="B1-B2" placeholder="请填写"></td>
+                        <td><input type="text" name="B1-B3" placeholder="请填写"></td>
+                        <td><input type="text" name="B1-B4" placeholder="请填写"></td>
+                    </tr>
+                    <tr>
+                        <th>B2 资源建设</th>
+                        <td><input type="text" name="B2-B1" placeholder="请填写"></td>
+                        <td>1</td>
+                        <td><input type="text" name="B2-B3" placeholder="请填写"></td>
+                        <td><input type="text" name="B2-B4" placeholder="请填写"></td>
+                    </tr>
+                    <tr>
+                        <th>B3 活动开展</th>
+                        <td><input type="text" name="B3-B1" placeholder="请填写"></td>
+                        <td><input type="text" name="B3-B2" placeholder="请填写"></td>
+                        <td>1</td>
+                        <td><input type="text" name="B3-B4" placeholder="请填写"></td>
+                    </tr>
+                    <tr>
+                        <th>B4 社会效果</th>
+                        <td><input type="text" name="B4-B1" placeholder="请填写"></td>
+                        <td><input type="text" name="B4-B2" placeholder="请填写"></td>
+                        <td><input type="text" name="B4-B3" placeholder="请填写"></td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 专家信息 -->
+            <div class="expert-info">
+                <h2>专家信息</h2>
+                
+                <div class="info-group">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" placeholder="请输入姓名">
+                </div>
+                
+                <div class="info-group">
+                    <label>专业领域：</label>
+                    <div class="radio-group">
+                        <label><input type="radio" id="field-em" name="field" value="应急管理"> 应急管理</label>
+                        <label><input type="radio" id="field-ps" name="field" value="公共安全"> 公共安全</label>
+                        <label><input type="radio" id="field-ep" name="field" value="教育科普"> 教育科普</label>
+                        <label><input type="radio" id="field-ss" name="field" value="社会科学"> 社会科学</label>
+                        <label><input type="radio" id="field-other" name="field" value="其他"> 其他</label>
+                        <input type="text" id="field-other-text" name="field-other-text" placeholder="请说明" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 提交按钮 -->
+            <div class="form-actions">
+                <button type="submit">提交问卷</button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        // 矩阵自动填充（只填写上半部分，下半部分自动计算）
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input[type="text"]');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const value = this.value.trim();
+                    if (value) {
+                        const numValue = parseFloat(value);
+                        if (!isNaN(numValue) && numValue > 0) {
+                            const name = this.name;
+                            const parts = name.split('-');
+                            if (parts.length === 2) {
+                                const lower = parts[1] + '-' + parts[0];
+                                const lowerInput = document.querySelector('input[name="' + lower + '"]');
+                                if (lowerInput) {
+                                    const reciprocal = 1 / numValue;
+                                    lowerInput.value = reciprocal.toFixed(2);
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+        });
+        
+        // 其他专业领域文本框显示/隐藏
+        document.getElementById('field-other').addEventListener('change', function() {
+            const otherText = document.getElementById('field-other-text');
+            if (this.checked) {
+                otherText.style.display = 'inline-block';
+                otherText.required = true;
+            } else {
+                otherText.style.display = 'none';
+                otherText.required = false;
+            }
+        });
+        
+        // 表单提交处理
+        document.getElementById('questionnaire-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            const jsonData = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'expert_questionnaire_' + new Date().toISOString().slice(0,10) + '.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            alert('问卷提交成功！请将下载的JSON文件发送给我们，感谢您的参与！');
+        });
+    </script>
+</body>
+</html>
